@@ -20,15 +20,16 @@ class LogIn : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
         FirebaseApp.initializeApp(this@LogIn)
-        databaseReference= FirebaseDatabase.getInstance().getReference()
-        //firebaseUser = auth!!.currentUser!!
 
+        //firebaseUser = auth!!.currentUser!!
         //check if user login then navigate to user screen
 
         val btnSignUp: Button = findViewById(R.id.btnSignUp)
         val btnLogin: Button = findViewById(R.id.btnLogin)
         val etName: EditText =findViewById(R.id.etName)
         val etPassword: EditText =findViewById(R.id.etPassword)
+        databaseReference= FirebaseDatabase.getInstance().getReference()
+
         btnLogin.setOnClickListener {
             val name = etName.text.toString()
             val password = etPassword.text.toString()
