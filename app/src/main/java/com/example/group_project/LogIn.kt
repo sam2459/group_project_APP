@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.example.group_project.ui.Chat.UserView
+import com.google.firebase.FirebaseApp
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -18,7 +19,7 @@ class LogIn : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
-
+        FirebaseApp.initializeApp(this@LogIn)
         databaseReference= FirebaseDatabase.getInstance().getReference()
         //firebaseUser = auth!!.currentUser!!
 
